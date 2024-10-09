@@ -1,0 +1,110 @@
+:host {
+  display: block;
+  color: white;
+}
+
+::ng-deep .mat-mdc-nav-list {
+  color: white !important;
+}
+
+::ng-deep .mat-mdc-list-item,
+::ng-deep .mat-mdc-list-item .mdc-list-item__primary-text {
+  color: white !important;
+}
+
+::ng-deep .mat-expansion-panel-header,
+::ng-deep .mat-expansion-panel-header-title,
+::ng-deep .mat-expansion-panel-header-description {
+  color: white !important;
+}
+
+::ng-deep .mat-expansion-indicator svg {
+  fill: white !important;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  color: white !important;
+}
+
+::ng-deep mat-icon {
+  color: white !important;
+}
+
+mat-nav-list {
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mat-expansion-panel {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.mat-expansion-panel-header {
+  padding: 0 16px;
+}
+
+.mat-expansion-panel-header-title {
+  align-items: center;
+}
+
+.mat-expansion-panel-header-title mat-icon {
+  margin-right: 16px;
+}
+
+.mat-mdc-nav-list .mat-mdc-list-item {
+  border-radius: 10px;
+}
+
+.sidebar-logo {
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+::ng-deep .mat-mdc-list-item.active,
+::ng-deep .mat-mdc-list-item.active .mdc-list-item__primary-text,
+::ng-deep .mat-expansion-panel .mat-mdc-list-item.active {
+  background-color: #014ea3 !important; /* Fondo ligeramente oscuro */
+}
+
+/* Estilos para elementos activos */
+.mat-mdc-list-item.active,
+.mat-expansion-panel.active > .mat-expansion-panel-header {
+  background-color: #014ea3 !important;
+}
+
+/* Estilo para panel de expansión cuando un hijo está activo */
+.mat-expansion-panel:has(.mat-mdc-list-item.active) {
+  background-color: rgba(1, 78, 163, 0.1) !important;
+}
+
+.mat-expansion-panel:has(.mat-mdc-list-item.active)
+  > .mat-expansion-panel-header {
+  background-color: #014ea3 !important;
+}
+
+/* Asegurar que el panel esté expandido cuando un hijo está activo */
+.mat-expansion-panel:has(.mat-mdc-list-item.active) {
+  height: auto !important;
+  visibility: visible !important;
+}
+
+.mat-expansion-panel:has(.mat-mdc-list-item.active)
+  > .mat-expansion-panel-content {
+  height: auto !important;
+  visibility: visible !important;
+}
+
+/* Ajustes de color para iconos y texto */
+.mat-mdc-list-item mat-icon,
+.mat-expansion-panel-header mat-icon,
+.mat-expansion-indicator::after {
+  color: white !important;
+}

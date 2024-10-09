@@ -1,0 +1,46 @@
+<div class="sidebar-logo">
+  <img
+    width="100"
+    height="100"
+    src="img/logo.png"
+    alt="Logo de la Empresa"
+    class="logo"
+  />
+</div>
+
+<mat-nav-list>
+  @for (item of menuItems; track item) {
+    @if (!item.children) {
+      <a
+        mat-list-item
+        [routerLink]="item.route"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+        <span matListItemTitle>{{ item.label }}</span>
+      </a>
+    } @else {
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>{{ item.icon }}</mat-icon>
+            {{ item.label }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          @for (child of item.children; track child) {
+            <a
+              mat-list-item
+              [routerLink]="child.route"
+              routerLinkActive="active"
+            >
+              <mat-icon matListItemIcon>{{ child.icon }}</mat-icon>
+              <span matListItemTitle>{{ child.label }}</span>
+            </a>
+          }
+        </mat-nav-list>
+      </mat-expansion-panel>
+    }
+  }
+</mat-nav-list>
