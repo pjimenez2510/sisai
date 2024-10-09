@@ -3,18 +3,18 @@
   color: white;
 }
 
-::ng-deep .mat-mdc-nav-list {
+.mat-mdc-nav-list {
   color: white !important;
 }
 
-::ng-deep .mat-mdc-list-item,
-::ng-deep .mat-mdc-list-item .mdc-list-item__primary-text {
+.mat-mdc-list-item,
+.mat-mdc-list-item .mdc-list-item__primary-text {
   color: white !important;
 }
 
-::ng-deep .mat-expansion-panel-header,
-::ng-deep .mat-expansion-panel-header-title,
-::ng-deep .mat-expansion-panel-header-description {
+.mat-expansion-panel-header,
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header-description {
   color: white !important;
 }
 
@@ -22,11 +22,11 @@
   fill: white !important;
 }
 
-::ng-deep .mat-expansion-panel-body {
+.mat-expansion-panel-body {
   color: white !important;
 }
 
-::ng-deep mat-icon {
+mat-icon {
   color: white !important;
 }
 
@@ -68,15 +68,16 @@ mat-nav-list {
   height: auto;
 }
 
-::ng-deep .mat-mdc-list-item.active,
-::ng-deep .mat-mdc-list-item.active .mdc-list-item__primary-text,
-::ng-deep .mat-expansion-panel .mat-mdc-list-item.active {
-  background-color: #014ea3 !important; /* Fondo ligeramente oscuro */
+.mat-mdc-list-item.active,
+.mat-mdc-list-item.active .mdc-list-item__primary-text,
+.mat-expansion-panel .mat-mdc-list-item.active {
+  background-color: #014ea3 !important;
+  /* Fondo ligeramente oscuro */
 }
 
 /* Estilos para elementos activos */
 .mat-mdc-list-item.active,
-.mat-expansion-panel.active > .mat-expansion-panel-header {
+.mat-expansion-panel.active>.mat-expansion-panel-header {
   background-color: #014ea3 !important;
 }
 
@@ -85,8 +86,7 @@ mat-nav-list {
   background-color: rgba(1, 78, 163, 0.1) !important;
 }
 
-.mat-expansion-panel:has(.mat-mdc-list-item.active)
-  > .mat-expansion-panel-header {
+.mat-expansion-panel:has(.mat-mdc-list-item.active)>.mat-expansion-panel-header {
   background-color: #014ea3 !important;
 }
 
@@ -96,8 +96,7 @@ mat-nav-list {
   visibility: visible !important;
 }
 
-.mat-expansion-panel:has(.mat-mdc-list-item.active)
-  > .mat-expansion-panel-content {
+.mat-expansion-panel:has(.mat-mdc-list-item.active)>.mat-expansion-panel-content {
   height: auto !important;
   visibility: visible !important;
 }

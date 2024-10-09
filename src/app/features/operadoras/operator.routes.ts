@@ -1,19 +1,19 @@
 import { Routes } from '@angular/router';
-import { CreateComponent } from './presentation/pages/create/create.component';
-import { ListComponent } from './presentation/pages/list/list.component';
+import { ListOperadorasComponent } from './presentation/pages/list-operadoras/list-operadoras.component';
+import { CreateOperadorasComponent } from './presentation/pages/create-operadoras/create-operadoras.component';
 
 export const operatorRoutes: Routes = [
   {
     path: 'crear',
-    component: CreateComponent,
+    component: CreateOperadorasComponent,
   },
   {
     path: 'lista',
-    component: ListComponent,
+    component: ListOperadorasComponent,
   },
   {
     path: '',
-    redirectTo: '/main/operadoras/crear',
+    redirectTo: 'crear',
     pathMatch: 'full',
   },
 ];
